@@ -1,0 +1,163 @@
+*,*::before, *::after{
+    box-sizing: border-box;
+}
+:root{
+    --color-primary: #e73b32;
+    --color-black : #000;
+    --color-white: #fff;
+
+    --color-red: red;
+    --font-family-primary: "Open sans", sans-serif;
+
+    /* ---- COLORS ALERTS ----- */
+    --alert-danger:#ffbaba;
+    --danger-border:1.5px solid var(--color-red);
+
+    --alert-success: #d1ffc3;
+    --success-border: 1.5px solid #4CAF50;
+    --font-size-alert: 14px;
+
+    --alert-warning: #808080;
+}
+body{
+    font-family: var(--font-family-primary);
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+body {
+    background: url("../../assets/image/background.jpg") no-repeat center center fixed !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.form-complaints-book{
+    width: 600px;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em 2em;
+    margin: 1.5em auto;
+}
+
+
+hr.hr-complaints-book {
+    width: 100px;
+    height: 2px;
+    background-color: var(--color-red);
+    border: none;
+    /*margin: 1px auto 20px;*/
+    margin: 1px auto;
+}
+
+h1.title-complaints-book{
+    font-size: 20px;
+    margin: 8px;
+    text-align: center;
+}
+
+.form-complaints-book > input,
+select, textarea{
+    font-family: var(--font-family-primary);
+    padding: 6px 20px;
+    border: .5px solid var(--color-black) ;
+    outline: none;
+}
+
+@media (max-width: 500px){
+    .form-complaints-book{
+        width: auto ;
+    }
+}
+.form-complaints-book > textarea{
+    resize: none;
+}
+
+.form-complaints-book > button,
+.responsee > .btn-refresh{
+    background-color: var(--color-primary);
+    padding: 15px 33px;
+    border: none;
+    color: var(--color-white);
+    width: 150px;
+    margin: 1em auto;
+}
+
+.form-complaints-book > button:hover,
+.responsee > .btn-refresh:hover{
+    cursor: pointer;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+li{
+    list-style: none;
+}
+
+
+/* ----------- ALERTS ----------- */
+.alerts-error > li,
+.alert-success > h1{
+    padding: .5em;
+    margin: .8em;
+}
+
+.alert-success > h1{
+    background: var(--alert-success);
+    border: var(--success-border);
+    font-size: var(--font-size-alert);
+    font-weight: 500;
+}
+.alert-success-complaints{
+    width: 100%;
+    padding: 0.5em 3em;
+    justify-content: center;
+    display: flex;
+}
+.alert-warning> li{
+    list-style-type: none;
+    background: var(--alert-warning);
+    border: var(--danger-border);
+    font-size: var(--font-size-alert);
+}
+
+.alert-warning > h1{
+    background: var(--alert-warning);
+    border: var(--success-border);
+    font-size: var(--font-size-alert);
+    font-weight: 500;
+}
+
+.alerts-error > li{
+    list-style-type: none;
+    background: var(--alert-danger);
+    border: var(--danger-border);
+    font-size: var(--font-size-alert);
+}
+
+.alerts-error > h1.error{
+    background: var(--alert-danger);
+    border: var(--danger-border);
+    font-size: var(--font-family-primary);
+}
+.responsee{
+    background: var(--color-white);
+    padding: 2em;
+    margin: 0 1em;
+}
+
+.responsee > p:first-child{
+    font-size: 16px;
+}
+.responsee > p{
+    font-size: 14px;
+}
+.responsee > .btn-refresh {
+    width: 200px;
+}
+
+.error-class {
+    border: 2.5px solid #e3004d !important;
+}
